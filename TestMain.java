@@ -58,9 +58,9 @@ public class TestMain {
             br.setSize(width, height);
             
             PipedOutputStream pipeOutLeftTopCorner = new PipedOutputStream();
-			PipedInputStream pipeInLeftTopCorner = new PipedInputStream(pipeOutLeftTopCorner);
-			DataOutputStream outLeftTopCorner = new DataOutputStream(pipeOutLeftTopCorner);
-			DataInputStream inLeftTopCorner = new DataInputStream(pipeInLeftTopCorner);
+	    PipedInputStream pipeInLeftTopCorner = new PipedInputStream(pipeOutLeftTopCorner);
+       	    DataOutputStream outLeftTopCorner = new DataOutputStream(pipeOutLeftTopCorner);
+	    DataInputStream inLeftTopCorner = new DataInputStream(pipeInLeftTopCorner);
 			
 			PipedOutputStream pipeOutRightTopCorner = new PipedOutputStream();
 			PipedInputStream pipeInRightTopCorner = new PipedInputStream(pipeOutRightTopCorner);
