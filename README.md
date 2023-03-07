@@ -2,7 +2,7 @@
 
  Proiectul are ca scop procesarea de imagini in Java folosind doar algoritmi si/ sau secvente de cod low-level. 
 
-## Aplicatia contine:
+## Concepte utilizate:
 - Multithreading
 	 - Producer-Consumer
 	 - Multithread Communication(notify)
