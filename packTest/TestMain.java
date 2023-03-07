@@ -58,31 +58,31 @@ public class TestMain {
             br.setSize(width, height);
             
             PipedOutputStream pipeOutLeftTopCorner = new PipedOutputStream();
-			PipedInputStream pipeInLeftTopCorner = new PipedInputStream(pipeOutLeftTopCorner);
-			DataOutputStream outLeftTopCorner = new DataOutputStream(pipeOutLeftTopCorner);
-			DataInputStream inLeftTopCorner = new DataInputStream(pipeInLeftTopCorner);
+	    PipedInputStream pipeInLeftTopCorner = new PipedInputStream(pipeOutLeftTopCorner);
+	    DataOutputStream outLeftTopCorner = new DataOutputStream(pipeOutLeftTopCorner);
+	    DataInputStream inLeftTopCorner = new DataInputStream(pipeInLeftTopCorner);
 			
-			PipedOutputStream pipeOutRightTopCorner = new PipedOutputStream();
-			PipedInputStream pipeInRightTopCorner = new PipedInputStream(pipeOutRightTopCorner);
-			DataOutputStream outRightTopCorner = new DataOutputStream(pipeOutRightTopCorner);
-			DataInputStream inRightTopCorner = new DataInputStream(pipeInRightTopCorner);
+	    PipedOutputStream pipeOutRightTopCorner = new PipedOutputStream();
+	    PipedInputStream pipeInRightTopCorner = new PipedInputStream(pipeOutRightTopCorner);
+	    DataOutputStream outRightTopCorner = new DataOutputStream(pipeOutRightTopCorner);
+	    DataInputStream inRightTopCorner = new DataInputStream(pipeInRightTopCorner);
 			
-			PipedOutputStream pipeOutLeftBottomCorner = new PipedOutputStream();
-			PipedInputStream pipeInLeftBottomCorner = new PipedInputStream(pipeOutLeftBottomCorner);
-			DataOutputStream outLeftBottomCorner = new DataOutputStream(pipeOutLeftBottomCorner);
-			DataInputStream inLeftBottomCorner = new DataInputStream(pipeInLeftBottomCorner);
+	    PipedOutputStream pipeOutLeftBottomCorner = new PipedOutputStream();
+	    PipedInputStream pipeInLeftBottomCorner = new PipedInputStream(pipeOutLeftBottomCorner);
+	    DataOutputStream outLeftBottomCorner = new DataOutputStream(pipeOutLeftBottomCorner);
+	    DataInputStream inLeftBottomCorner = new DataInputStream(pipeInLeftBottomCorner);
 			
-			PipedOutputStream pipeOutRightBottomCorner = new PipedOutputStream();
-			PipedInputStream pipeInRightBottomCorner = new PipedInputStream(pipeOutRightBottomCorner);		
-			DataOutputStream outRightBottomCorner = new DataOutputStream(pipeOutRightBottomCorner);
-			DataInputStream inRightBottomCorner = new DataInputStream(pipeInRightBottomCorner);
+	    PipedOutputStream pipeOutRightBottomCorner = new PipedOutputStream();
+	    PipedInputStream pipeInRightBottomCorner = new PipedInputStream(pipeOutRightBottomCorner);		
+	    DataOutputStream outRightBottomCorner = new DataOutputStream(pipeOutRightBottomCorner);
+	    DataInputStream inRightBottomCorner = new DataInputStream(pipeInRightBottomCorner);
            
             ImageProducer leftTopCornerRead = new ImageProducer(b, 0, width/2, 0, height/2, img.getInputPath(), timeValues); //sunt initializate 4 threduri pentru citirea fiecarui sfert de informatie            
             ImageProducer rightTopCornerRead = new ImageProducer(b, width/2 + 1, width-1,0, height/2, img.getInputPath(), timeValues);
             ImageProducer leftBottomCornerRead = new ImageProducer(b, 0, width/2, height/2+1, height-1, img.getInputPath(), timeValues);
             ImageProducer rightBottomCornerRead = new ImageProducer(b, width/2 + 1, width-1, height/2 + 1, height-1, img.getInputPath(), timeValues);
 			
-			ImageConsumer leftTopCornerWrite = new ImageConsumer(b, 0, width/2, 0, height/2, outLeftTopCorner, timeValues, pixel);
+	    ImageConsumer leftTopCornerWrite = new ImageConsumer(b, 0, width/2, 0, height/2, outLeftTopCorner, timeValues, pixel);
             ImageConsumer rightTopCornerWrite = new ImageConsumer(b, width/2 + 1, width-1,0, height/2, outRightTopCorner, timeValues, pixel);
             ImageConsumer leftBottomCornerWrite = new ImageConsumer(b, 0, width/2,height/2+1, height-1, outLeftBottomCorner, timeValues, pixel);
             ImageConsumer rightBottomCornerWrite = new ImageConsumer(b, width/2 + 1, width-1, height/2 + 1, height-1, outRightBottomCorner, timeValues, pixel);
@@ -106,16 +106,11 @@ public class TestMain {
             leftTopCornerWriterResult.start();
             rightTopCornerWriterResult.start();
             leftBottomCornerWriterResult.start();
-            rightBottomCornerWriterResult.start();
-            
-            
-            //de afisat timpii
+            rightBottomCornerWriterResult.start();      
         } catch (IOException e) {
             System.out.println("Eroare la citirea din fisier!");
             e.printStackTrace();
         } finally {
-
-            // buffImage.close();
         }
         
          
