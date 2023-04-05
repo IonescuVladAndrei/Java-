@@ -15,7 +15,7 @@ public class BufferWriteResult {
 	public synchronized Color get(int i, int j) {
 		while (!available) {
             try {
-                wait(); // Asteapta producatorul sa puna o valoare
+                wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -26,8 +26,8 @@ public class BufferWriteResult {
 	
     public synchronized void put(Color value, int i, int j) {
     	this.imageMatrix[i][j] = value;
-        if (i == (imageMatrix.length-1) && j == (imageMatrix[0].length-1)){ //se amana procesarea pana dupa terminarea
-            available = true;                                      			//consumului intregii informatii din imaginea sursa    
+        if (i == (imageMatrix.length-1) && j == (imageMatrix[0].length-1)){ 
+            available = true;                                      		  
         }
         notifyAll();
      }
