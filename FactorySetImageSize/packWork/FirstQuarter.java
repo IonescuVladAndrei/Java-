@@ -13,15 +13,18 @@ public class FirstQuarter implements ImageSize {
     public int widthStart() {
         return 0;
     }
-
+    
+    @Override
     public int widthEnd() {
         return this.fullWidth / 2;
     }
-
+    
+    @Override
     public int heightStart() {
         return 0;
     }
 
+    @Override
     public int heightEnd() {
         return this.fullHeight / 2;
     }
