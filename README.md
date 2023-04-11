@@ -1,1 +1,1 @@
-# Diverse programe scris in Java
+# Diverse programe scrise in Java
