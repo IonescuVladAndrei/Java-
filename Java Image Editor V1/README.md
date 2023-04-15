@@ -41,9 +41,6 @@
 - BufferWriterResult este similar cu Buffer, memorand numai datele primite prin intermediul pipe-urilor de la ImageConsumer la WriterResult.
 - TestMain contine tratare exceptii, definire thread-uri, pipe-uri si obiecte.
 
-## Descriere detaliata a modului de functionare
-
-
 ##  Bibliografie
 - cursuri facultate
 - https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
