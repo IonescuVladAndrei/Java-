@@ -3,7 +3,9 @@ package packWork;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ImagePath {
 
@@ -18,21 +20,28 @@ public class ImagePath {
 	}
 
 	public void setPath(int act) throws IOException {
-		File directory = new File("src/Images/input/house.png");
-        String s = directory.getAbsolutePath();
-        System.out.println(s);
-		if (act == 0) {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			System.out.println("Introduceti numele imaginii input (cu tot cu extensie)");
-			this.path = reader.readLine();
-			this.path = "C:\\Users\\Vlad\\Desktop\\Java dev\\JavaImageEditorV2\\Images\\input\\".concat(this.path);
-			System.out.println("Am setat path-ul: " + this.path);
-			reader.close();
 		
-		}else{
-			this.path = "C:\\Users\\Vlad\\Desktop\\Java dev\\JavaImageEditorV2\\Images\\output\\output.png";
-			System.out.println("Path output: " + this.path);
-		} 	
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		if (act == 0) {
+			System.out.println("Introduceti numele fisierului de intrare(inclusiv extensia): ");
+			
+			this.path = reader.readLine();
+			Path newPath = Paths.get("Images/input/" + this.path);
+			while(!Files.exists(newPath)){
+				System.out.println("Numele fisierului introdus anterior nu a fost gasit. Reintroduceti: ");
+				this.path = reader.readLine();
+				newPath = Paths.get("input/" + this.path);
+			}
+			this.path = newPath.toAbsolutePath().toString();
+			System.out.println("Am gasit fisierul de intrare in: " + this.path);
+		} else {
+			System.out.println("Alegeti o denumire pentru numele fisierului de iesire(inclusiv .png): ");
+			Path newPath = Paths.get("Images/output/" + reader.readLine());
+			if(Files.exists(newPath))
+				System.out.println("(cel putin merge)");
+			this.path = newPath.toAbsolutePath().toString();
+			System.out.println("Am setat fisierul de iesire: " + this.path);	
+		}
 	}
 
 	public String getPath() {
