@@ -5,32 +5,27 @@ import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.awt.image.WritableRaster;
 import java.io.*;
-import java.net.URL;
 
 import javax.imageio.ImageIO;
-
+ 
 import packImageConsumer.*;
 
 public class TestingClass {
-
 	public static void main(String[] args) throws IOException {
 		BufferedImage buffImage = null;
 		int height, width, filter, filterValue = 0;
-		boolean firstTime = false;
-		//path-urile pentru imagini 
-		ImagePath ImagePathInput = new ImagePath("C:\\Users\\Vlad\\Desktop\\Java dev\\JavaImageEditorV2\\Images\\input\\house2.png"),
-				ImagePathOutput = new ImagePath("C:\\Users\\Vlad\\Desktop\\Java dev\\JavaImageEditorV2\\Images\\output\\output.png");
-		
+		boolean stopCond = false;
+		ImagePath ImagePathInput = new ImagePath(), ImagePathOutput = new ImagePath();
+		ImagePathInput.setPath(0);
+		ImagePathOutput.setPath(1);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String inputCommand = "-1";
-		while (inputCommand.compareTo("s") != 0) {
-			if(!firstTime) {
-				System.out.println("Introduceti S pentru stop sau orice al caracter pentru continuare");
-				firstTime = true;
+		while (inputCommand.compareTo("S") != 0) {
+			if(stopCond){
+				inputCommand = reader.readLine();
+				System.out.println("Ati introdus: " + inputCommand);
 			}
-				
-			inputCommand = reader.readLine();
-			System.out.println("Ati introdus: " + inputCommand);
+			stopCond = true;
 			if (inputCommand.equals("S"))
 				System.out.println("Programul se va opri acum");
 			else {
