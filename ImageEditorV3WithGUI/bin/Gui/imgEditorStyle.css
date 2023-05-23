@@ -1,0 +1,210 @@
+#backgrAP {
+    -fx-font-family: Verdana;
+    font-family: Verdana;
+    -fx-background-image: url("guiImages/background.png");
+    background-image: url("guiImages/background.png");
+}
+
+.text-field{
+    -fx-border-radius: 5px;
+    border-radius: 5px;
+    -fx-border-color: #022c47;
+    border-color: #022c47;
+    -fx-effect: dropshadow(GAUSSIAN, rgb(71, 71, 71), 10, 0, 0, 3);
+    -fx-background-radius: 6px;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.check-box{
+    -fx-font-family: Verdana;
+    font-family: Verdana;
+    -fx-text-fill: #0a0c0d;
+    -fx-font-size: 14;
+    font-size: 14;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-border-color: #022c47;
+    border-color: #022c47;
+    -fx-border-radius: 5px;
+    border-radius: 5px;
+    -fx-background-radius: 6px;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+    background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #659DBD;
+    background-color: #659DBD;
+}
+
+.radio-button {
+    -fx-font-family: Verdana;
+    font-family: Verdana;
+    -fx-font-size: 15;
+    font-size: 15;
+    -fx-border-width: 1px;
+    border-width: 1px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 15px;
+    border-radius: 15px;
+    -fx-padding: 4px;
+    padding: 4px;
+    -fx-text-fill: #0a0c0d;
+}
+
+.button {
+    -fx-font-family: Verdana;
+    font-family: Verdana;
+    -fx-background-color: #659DBD;
+    background-color: #659DBD;
+    -fx-font-size: 18;
+    font-size: 18;
+    -fx-text-fill: white;
+    -fx-border-radius: 10;
+    border-radius: 10;
+    -fx-border-width: 3;
+    border-width: 3;
+    -fx-padding: 5 12 5 12;
+    padding: 5 12 5 12;
+    -fx-border-color: #659DBD;
+    border-color: #659DBD;
+    -fx-effect: dropshadow(GAUSSIAN, rgb(71, 71, 71), 10, 0, 0, 3);
+    /*foarte importante pentru estetica*/
+    -fx-background-radius: 13;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+#paintButton {
+    -fx-text-fill: #c72030;
+}
+
+#exitButton {
+    -fx-background-color: #E7717D;
+    background-color: #E7717D;
+    -fx-border-color: #E7717D;
+    border-color: #E7717D;
+    -fx-padding: 5 17 5 17;
+    padding: 5 17 5 17;
+}
+
+.button:hover {
+    -fx-background-color: #005b96;
+    background-color: #005b96;
+    -fx-border-radius: 10;
+    border-radius: 10;
+    -fx-border-width: 3;
+    border-width: 3;
+    -fx-border-color: #005b96;
+    border-color: #005b96;
+    -fx-cursor: HAND;
+    cursor: HAND;
+}
+
+#exitButton:hover {
+    -fx-background-color: #c72030;
+    background-color: #c72030;
+    -fx-border-color: #c72030;
+    border-color: #c72030;
+}
+
+.button:pressed {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-text-fill: #005b96;
+    -fx-border-color: #005b96;
+    border-color: #005b96;
+    -fx-border-radius: 10;
+    border-radius: 10;
+    -fx-border-width: 3;
+    border-width: 3;
+}
+
+#exitButton:pressed {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-text-fill: #c72030;
+    -fx-border-color: #c72030;
+    border-color: #c72030;
+}
+
+.label {
+    -fx-font-family: Verdana;
+    font-family: Verdana;
+    -fx-font-size: 18;
+    font-size: 18;
+    -fx-text-fill: #011f4b;
+}
+
+.myDialog {
+    -fx-background-color: #EDF5E1;
+    background-color: #EDF5E1;
+}
+
+.myDialog>*.button-bar>*.container {
+    -fx-background-color: #EDF5E1;
+    background-color: #EDF5E1;
+}
+
+.myDialog>*.label.content {
+    -fx-font-size: 16px;
+    font-size: 16px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+.myDialog:header *.header-panel {
+    -fx-background-color: #EDF5E1;
+    background-color: #EDF5E1;
+}
+
+.myDialog:header *.header-panel *.label {
+    -fx-font-size: 18px;
+    font-size: 18px;
+    -fx-font-style: italic;
+    font-style: italic;
+    -fx-fill: #292929;
+    fill: #292929;
+}
+
+.myDialog:header *.button-bar *.button {
+    -fx-padding: 2 8 2 8;
+    padding: 2 8 2 8;
+    -fx-text-fill: #EDF5E1;
+    -fx-background-color: #011f4b;
+    background-color: #011f4b;
+    -fx-border-color: #011f4b;
+    border-color: #011f4b;
+    -fx-border-radius: 10;
+    border-radius: 10;
+    -fx-border-width: 2;
+    border-width: 2;
+    -fx-effect: dropshadow(GAUSSIAN, rgb(71, 71, 71), 10, 0, 0, 3);
+    -fx-background-radius: 13;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.myDialog:header *.button-bar *.button:hover {
+    -fx-background-color: #5e0e0e;
+    background-color: #5e0e0e;
+    -fx-border-color: #5e0e0e;
+    border-color: #5e0e0e;
+}
+
+.myDialog:header *.button-bar *.button:pressed {
+    -fx-background-color: #EDF5E1;
+    background-color: #EDF5E1;
+    -fx-text-fill: #111111;
+    -fx-border-color: #5e0e0e;
+    border-color: #5e0e0e;
+}
+
+#currentVallueLabel{
+    -fx-text-fill: #8f1010;
+}
