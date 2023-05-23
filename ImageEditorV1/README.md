@@ -5,7 +5,7 @@
 ## Concepte utilizate:
 - Multithreading
 	 - Producer-Consumer
-	 - Multithread Communication(notify)
+	 - Multithread Communication (notify)
 - Comunicare prin Pipes
 - Tratare exceptii
 - Clase Abstracte & Metode Abstracte
