@@ -1,0 +1,8 @@
+Duna Vlad 45
+Andrei Cata 45
+Vlad 229
+Vlad Duna 23
+Duna 45
+Cata 34
+Andrei 45
+Cata Andrei 34
