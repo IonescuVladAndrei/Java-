@@ -147,6 +147,8 @@ public class testFlow {
     public static void main(String[] args) throws InterruptedException{
         testFlow testFlow = new testFlow();
         System.out.println(testFlow.testare(1));
+        //System.out.println(testFlow.testare(2));      //testare caz 2
+        //System.out.println(testFlow.testare(3));      //testare caz 3
     }
 }
 
